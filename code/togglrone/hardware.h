@@ -4,10 +4,12 @@
   #include <Adafruit_ST7789.h> // Hardware-specific library for ST7789
   #include <ESPRotary.h>;
   #include <Button2.h>;
-  #include "PinDefinitions.h"
+  #include "constants.h"
   #include "Toggl.h"
   #include "secrets.h"
+  
 
+  
   // global objects
   extern Adafruit_ST7789 tft;
   extern Toggl toggl;
@@ -29,7 +31,10 @@
 
   //screen functions
   void setupScreen();
-
+  void clearScreen();
+  void showError(String const& error);
+  void generateSelected(int const& index);
+  
   // toggl functions
   void setupToggl();
   

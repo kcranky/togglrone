@@ -1,4 +1,5 @@
 #include "hardware.h"
+#include "states.h"
 
 void setup(void) {
   // add debug serial
@@ -7,11 +8,12 @@ void setup(void) {
   setupHardware();
 
   // do the single setup
-  delay(250);
+  tft.fillScreen(ST77XX_BLACK);
   tft.setCursor(0,0);
   tft.setTextColor(ST77XX_RED, ST77XX_BLACK);
-  tft.setTextSize(2);
   tft.println(toggl.getFullName());
+
+  enterProjects();
 }
 
 

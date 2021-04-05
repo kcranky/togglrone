@@ -1,4 +1,7 @@
 // Button
+#ifndef CONSTANTS_H
+#define CONSTANTS_H
+
 #define BUTTON_PIN  D0
 
 // Rotary Encoder
@@ -10,3 +13,8 @@
 #define TFT_DC    D1
 #define TFT_RST   D2
 #define TFT_CS    D8
+
+// other constants worth knowing
+const int LINES_ON_SCREEN = 15;
+
+#endif
